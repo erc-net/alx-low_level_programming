@@ -1,6 +1,6 @@
 /*
  * File: 6-print_numberz.c
- * Auth: Eric 
+ * Auth: Eric Taruwinga
  */
 
 #include <stdio.h>
