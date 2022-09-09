@@ -1,6 +1,6 @@
 /*
  * File: 1-last_digit.c
- * Eric Taruwinga 
+ * By: Eric Taruwinga 
  */
 
 #include <stdlib.h>
