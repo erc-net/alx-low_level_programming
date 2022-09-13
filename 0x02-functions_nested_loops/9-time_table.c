@@ -1,39 +1,28 @@
 #include "main.h"
+
 /**
- * times_table -  a function that prints the 9 times table, starting with 0
- * rone = row, cone = column, d = digits of current result
- * Return: times table
- * add extra space past single digit
+ * jack_bauer - print every minute of a day
+ * Description: print minutes 00:00 to 23:59
  */
-void times_table(void)
+
+void jack_bauer(void)
 {
-	int rone, cone, d;
+	int hours = 0;
+	int min = 0;
 
-	for (rone = 0; rone <= 9; rone++)
+	while (hours < 24)
 	{
-		_putchar('0');
-		_putchar(',');
-		_putchar(' ');
-		for (cone = 1; cone <= 9; cone++)
+		while (min < 60)
 		{
-			d = (rone * cone);
-			if ((d / 10) > 0)
-			{
-				_putchar((d / 10) + '0');
-			}
-			else
-			{
-				_putchar(' ');
-			}
-			_putchar((d % 10) + '0');
-
-			if (cone < 9)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
+			_putchar('0' + (hours / 10));
+			_putchar('0' + (hours % 10));
+			_putchar(':');
+			_putchar('0' + (min / 10));
+			_putchar('0' + (min % 10));
+			_putchar('\n');
+			min++;
 		}
-		_putchar('\n');
+		min = 0;
+		hours++;
 	}
-
 }
