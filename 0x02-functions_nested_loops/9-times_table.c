@@ -1,28 +1,40 @@
 #include "main.h"
 
 /**
- * jack_bauer - print every minute of a day
- * Description: print minutes 00:00 to 23:59
+ * times_table - print multiplication table
  */
 
-void jack_bauer(void)
+void times_table(void)
 {
-	int hours = 0;
-	int min = 0;
+	int row;
+	int column;
+	int product;
 
-	while (hours < 24)
+	for (row = 0; row <= 9; row++)
 	{
-		while (min < 60)
+		for (column = 0; column <= 9; column++)
 		{
-			_putchar('0' + (hours / 10));
-			_putchar('0' + (hours % 10));
-			_putchar(':');
-			_putchar('0' + (min / 10));
-			_putchar('0' + (min % 10));
-			_putchar('\n');
-			min++;
+			product = (row * column);
+
+			if (column == 0)
+			{
+				_putchar('0' + product);
+			}
+			else if (product <= 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar('0' + product);
+			}
+			else if (product > 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar('0' + (product / 10));
+				_putchar('0' + (product % 10));
+			}
 		}
-		min = 0;
-		hours++;
+		_putchar('\n');
 	}
 }
