@@ -1,10 +1,10 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include "main.h"
+
 /**
- * main - Entry Point
- * Return: 0
- */
+  * main - Prints the file name of the program
+  *
+  * Return: Always zero
+  */
 int main(void)
 {
 	printf("%s\n", __FILE__);
